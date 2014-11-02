@@ -1,17 +1,12 @@
 Package.describe({
-  name: 'angular-ui',
-  summary: ' /* Fill me in! */ ',
-  version: '1.0.0',
-  git: ' /* Fill me in! */ '
+  name: 'superchris:angular-ui-bootstrap',
+  summary: 'A meteorized version of angular-ui-bootstrap',
+  version: '0.11.2',
+  git: 'https://github.com/superchris/meteor-angular-ui-bootstrap.git'
 });
 
 Package.onUse(function(api) {
   api.versionsFrom('1.0');
-  api.addFiles('angular-ui.js');
-});
-
-Package.onTest(function(api) {
-  api.use('tinytest');
-  api.use('angular-ui');
-  api.addFiles('angular-ui-tests.js');
+  api.use("superchris:angular@1.3.2", "client");
+  api.addFiles(["angular-ui/./ui-bootstrap-tpls.js"], "client");
 });
